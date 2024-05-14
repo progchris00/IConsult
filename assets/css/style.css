@@ -1,23 +1,23 @@
 :root {
-    /* colors */
-    --primary-color: #0F0F0F; 
-    --font-color-white: #FFFFFF;
-    --secondary-color: #643DFF;
-    --app-background-color: #F5F7FA;
-    --foreground-color: #3b3b4f;
-    --highlight-color: #0D0521;
-  
-    /* font sizes */
-    --root-font-size: 16px;
-    font-size: var(--root-font-size);
-  
-    /* font-families */
-    --font-headline: "Roboto", sans-serif;
-    --font-family: "Outfit", sans-serif;
-  }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
+  /* colors */
+  --primary-color: #0f0f0f;
+  --font-color-white: #ffffff;
+  --secondary-color: #643dff;
+  --app-background-color: #f5f7fa;
+  --foreground-color: #3b3b4f;
+  --highlight-color: #0d0521;
+
+  /* font sizes */
+  --root-font-size: 16px;
+  font-size: var(--root-font-size);
+
+  /* font-families */
+  --font-headline: "Roboto", sans-serif;
+  --font-family: "Outfit", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
