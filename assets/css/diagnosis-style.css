@@ -39,8 +39,9 @@ aside {
   grid-column: 1 / 3;
   grid-row: 1 / 13;
   background-color: var(--highlight-color);
-
-  padding-left: 40px;
+  padding: 20px 0 0 30px;
+  font-family: var(--font-headline);
+  color: var(--font-color-white);
 }
 
 main {
@@ -61,23 +62,22 @@ section {
 
 .selected {
   background-color: #643dff;
-  padding: 10px 0;
-  border-radius: 10px;
+  padding: 8px 20px;
+  border-radius: 12px;
   width: 90%;
 }
 
-/* Fonts */
-h2 {
-  color: var(--font-color-white);
+.icon {
+  display: flex;
+  align-items: center;
 }
 
+/* Fonts */
 .sidebar > ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  color: var(--font-color-white);
   list-style-type: none;
   padding: 0;
-  font-family: var(--font-headline);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
