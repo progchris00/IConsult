@@ -33,6 +33,12 @@ body {
 nav {
   grid-column: 3 / 13;
   background-color: var(--font-color-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-family);
 }
 
 aside {
@@ -72,6 +78,33 @@ section {
   align-items: center;
 }
 
+.nav-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 40%;
+}
+
+.search-box {
+  background-color: var(--app-background-color);
+  width: 85%;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.profile img {
+  width: 40px;
+}
+
 /* Fonts */
 .sidebar > ul {
   display: flex;
@@ -80,4 +113,9 @@ section {
   list-style-type: none;
   padding: 0;
   font-size: 1rem;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
