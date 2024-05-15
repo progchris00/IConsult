@@ -148,6 +148,17 @@ section {
   color: var(--font-color-white);
 }
 
+#proceed-button {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-family: var(--font-family);
+  color: var(--font-color-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 /* End of section */
 
 /* Fonts */
