@@ -187,6 +187,19 @@ section {
 
 /* End of section */
 
+/* Main */
+.model-section {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.model-section img {
+  width: 500px;
+}
+
+/* Main end */
+
 /* Fonts */
 .sidebar > ul {
   display: flex;
