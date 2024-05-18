@@ -194,6 +194,10 @@ section {
   justify-content: center;
 }
 
+.assessment {
+  align-self: flex-end;
+}
+
 /* Main end */
 
 /* Fonts */
