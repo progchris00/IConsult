@@ -192,10 +192,17 @@ section {
   width: 70%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .assessment {
   align-self: flex-end;
+}
+
+.model {
+  width: 450px;
+  height: 650px;
 }
 
 /* Main end */
