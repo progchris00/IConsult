@@ -196,6 +196,10 @@ section {
   height: 100%;
 }
 
+.assessment-container {
+  font-family: var(--font-family);
+}
+
 .assessment {
   align-self: flex-end;
 }
@@ -218,17 +222,18 @@ section {
   width: 70%;
   padding: 20px;
   border-radius: 16px;
-  background-color: var(--app-background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
-  height: 400px;
+  height: 500px;
   gap: 20px;
+  background-color: var(--font-color-white);
 }
 
 .assessment-container h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--secondary-color);
 }
 
@@ -273,10 +278,13 @@ section {
 
 .next-question {
   border: 2px solid white;
-  border-radius: 12px;
-  padding: 10px 20px;
+  border-radius: 8px;
+  padding: 10px 30px;
   background-color: var(--secondary-color);
   align-self: flex-end;
+  color: var(--font-color-white);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 /* Main end */
