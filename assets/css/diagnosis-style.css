@@ -288,8 +288,21 @@ section {
   width: 150px;
 }
 
+.button:hover:not(.inactive) {
+  background-color: #4703bb;
+}
+
+#question-number {
+  text-align: start;
+}
+
+#question-count {
+  font-size: 0.8rem;
+}
+
 .inactive {
   background-color: #c9cacb;
+  color: #717888;
   cursor: not-allowed;
 }
 
