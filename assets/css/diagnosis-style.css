@@ -196,10 +196,6 @@ section {
   height: 100%;
 }
 
-.assessment-container {
-  font-family: var(--font-family);
-}
-
 .assessment {
   align-self: flex-end;
 }
@@ -230,6 +226,7 @@ section {
   height: 500px;
   gap: 20px;
   background-color: var(--font-color-white);
+  font-family: var(--font-family);
 }
 
 .assessment-container h3 {
@@ -276,6 +273,7 @@ section {
   border: none;
   padding: 10px;
   border-radius: 16px;
+  font-family: var(--font-family);
 }
 
 #next-question {

@@ -1,5 +1,6 @@
 const questionContainer = document.getElementById("assessment-question");
 const nextQuestionButton = document.getElementById("next-question");
+const inputBox = document.getElementById("input-box");
 
 const allQuestions = [
   {
@@ -8,12 +9,12 @@ const allQuestions = [
   },
   {
     id: 1,
-    question: "How long have you been experiencing these symptoms?",
+    question: "For how long have you been experiencing these symptoms?",
   },
   {
     id: 2,
     question:
-      "Have these symptoms been persistent or have they been coming and going?",
+      "Have these symptoms been persistent, or have they been coming and going?",
   },
   {
     id: 3,
@@ -32,6 +33,7 @@ const showNextQuestion = () => {
   const nextQuestionId = (currentQuestionIndex += 1);
 
   loadQuestion(nextQuestionId);
+  inputBox.value = "";
 };
 
 const loadQuestion = (id) => {
