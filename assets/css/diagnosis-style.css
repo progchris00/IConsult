@@ -276,16 +276,28 @@ section {
   font-family: var(--font-family);
 }
 
-#next-question {
+.button {
   border: 2px solid white;
   border-radius: 8px;
   padding: 10px 30px;
   background-color: var(--secondary-color);
-  align-self: flex-end;
   color: var(--font-color-white);
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
+  width: 150px;
+}
+
+.inactive {
+  background-color: #c9cacb;
+  cursor: not-allowed;
+}
+
+.navigation-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Main end */

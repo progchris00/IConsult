@@ -1,5 +1,6 @@
 const questionContainer = document.getElementById("assessment-question");
 const nextQuestionButton = document.getElementById("next-question");
+const previousQuestionButton = document.getElementById("previous-question");
 const inputBox = document.getElementById("input-box");
 
 const allQuestions = [
@@ -36,10 +37,27 @@ const showNextQuestion = () => {
   inputBox.value = "";
 };
 
+const showPreviousQuestion = () => {
+  const previousQuestionId = (currentQuestionIndex -= 1);
+
+  loadQuestion(previousQuestionId);
+  inputBox.value = "";
+};
+
 const loadQuestion = (id) => {
+  if (currentQuestionIndex === allQuestions.length - 1) {
+    nextQuestionButton.innerHTML = "Submit";
+  }
+  if (currentQuestionIndex > 0) {
+    previousQuestionButton.classList.remove("inactive");
+  }
+  if (currentQuestionIndex === 0) {
+    previousQuestionButton.classList.add("inactive");
+  }
   questionContainer.innerHTML = allQuestions[id].question;
 };
 
 nextQuestionButton.addEventListener("click", showNextQuestion);
+previousQuestionButton.addEventListener("click", showPreviousQuestion);
 
 loadQuestion(currentQuestionIndex);
