@@ -50,6 +50,11 @@ aside {
   color: var(--font-color-white);
 }
 
+aside a {
+  color: var(--font-color-white);
+  text-decoration: none;
+}
+
 main {
   grid-column: 3 / 13;
   grid-row: 2 / 13;

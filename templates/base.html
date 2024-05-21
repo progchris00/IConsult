@@ -36,10 +36,15 @@
       </div>
     </nav>
     <aside>
-      <div class="icon">
-        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" />
-        <h2>Iconsult</h2>
-      </div>
+      <a href="{{ url_for('home')}}">
+        <div class="icon">
+          <img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt=""
+          />
+          <h2>Iconsult</h2>
+        </div></a
+      >
       <div class="sidebar">
         <ul>
           <li class="selected">Diagnosis</li>
@@ -131,7 +136,7 @@
           </div>
         </div>
       </div>
-      <a href="assessment.html" class="assessment"
+      <a href="{{ url_for('assessment')}}" class="assessment"
         ><button id="proceed-button">Proceed</button></a
       >
     </section>
