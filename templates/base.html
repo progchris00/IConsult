@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assessment</title>
-    <link rel="icon" type="image/x-icon" href="/assets/images/logo.png" />
+    <title>Diagnosis</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/logo.png') }}"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/diagnosis-style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/diagnosis-style.css') }}"
+    />
   </head>
   <body>
     <nav>
@@ -20,14 +27,17 @@
         <div class="nav-left-side">
           <div class="search-box">search here</div>
           <div class="profile">
-            <img src="assets/images/profile-icon.png" alt="" />
+            <img
+              src="{{ url_for('static', filename='images/profile-icon.png') }}"
+              alt=""
+            />
           </div>
         </div>
       </div>
     </nav>
     <aside>
       <div class="icon">
-        <img src="assets/images/logo.png" alt="" />
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" />
         <h2>Iconsult</h2>
       </div>
       <div class="sidebar">
@@ -42,34 +52,7 @@
         </ul>
       </div>
     </aside>
-    <main>
-      <div class="assessment-area">
-        <div class="assessment-container">
-          <h3>
-            On this stage, we want you to answer various questions for us to
-            better assess your condition.
-          </h3>
-          <p>Please answer the questions as clearly as possible.</p>
-          <div class="question-area">
-            <div class="question">
-              <div class="question-left-side">
-                <div id="question-number">
-                  <p id="question-count"></p>
-                  <p id="assessment-question"></p>
-                </div>
-                <input id="input-box" type="text" placeholder="Answer here" />
-              </div>
-            </div>
-          </div>
-          <div class="navigation-buttons">
-            <button class="button inactive" id="previous-question">
-              Previous
-            </button>
-            <button class="button" id="next-question">Next</button>
-          </div>
-        </div>
-      </div>
-    </main>
+    {% block body %}{% endblock %}
     <section>
       <h3>Pre-checkup Progress</h3>
       <div class="calendar">
@@ -96,28 +79,40 @@
       </div>
       <div class="procedure">
         <div class="steps">
-          <img src="assets/images/stepOne.png" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/step-one.png') }}"
+            alt=""
+          />
           <div class="step-name-and-description">
             <span class="step-name">Current step</span>
             <span class="step-description">Symptoms description</span>
           </div>
         </div>
         <div class="steps">
-          <img src="assets/images/stepOne.png" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/step-one.png') }}"
+            alt=""
+          />
           <div class="step-name-and-description">
             <span class="step-name">Step 2</span>
             <span class="step-description">Medical history</span>
           </div>
         </div>
         <div class="steps">
-          <img src="assets/images/stepOne.png" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/step-one.png') }}"
+            alt=""
+          />
           <div class="step-name-and-description">
             <span class="step-name">Step 3</span>
             <span class="step-description">AI condition assessment</span>
           </div>
         </div>
         <div class="steps">
-          <img src="assets/images/stepOne.png" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/step-one.png') }}"
+            alt=""
+          />
           <div class="step-name-and-description">
             <span class="step-name">Step 4</span>
             <span class="step-description"
@@ -126,7 +121,10 @@
           </div>
         </div>
         <div class="steps">
-          <img src="assets/images/stepOne.png" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/step-one.png') }}"
+            alt=""
+          />
           <div class="step-name-and-description">
             <span class="step-name">Final step</span>
             <span class="step-description">Appoinment Scheduling</span>
@@ -137,6 +135,6 @@
         ><button id="proceed-button">Proceed</button></a
       >
     </section>
-    <script src="assets/script/assessment.js"></script>
+    {% block script %} {% endblock %}
   </body>
 </html>
