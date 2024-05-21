@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block body%}
+<main>
+  <div class="result-area">
+    <div class="result-container">
+      <h3>{{ output }}</h3>
+    </div>
+  </div>
+</main>
+{% endblock %} {% block script %}
+<script src="{{ url_for('static', filename='script/assessment.js') }}"></script>
+{% endblock %}

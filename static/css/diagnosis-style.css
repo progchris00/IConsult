@@ -321,6 +321,23 @@ button:hover:not(.inactive),
 
 /* Main end */
 
+/* Result area */
+.result-area {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-container {
+  background-color: var(--secondary-color);
+  width: 70%;
+  padding: 20px;
+  height: 500px;
+  border-radius: 16px;
+}
+
 /* Fonts */
 .sidebar > ul {
   display: flex;
