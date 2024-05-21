@@ -79,6 +79,10 @@ main {
   width: 500px;
 }
 
+button:hover:not(.inactive, .ghost-button) {
+  background-color: #4703bb;
+}
+
 /* Buttons */
 button {
   width: 170px;

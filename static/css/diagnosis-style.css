@@ -293,7 +293,8 @@ section {
   width: 150px;
 }
 
-.button:hover:not(.inactive) {
+button:hover:not(.inactive),
+#proceed-button:hover {
   background-color: #4703bb;
 }
 
