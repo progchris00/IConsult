@@ -1,5 +1,4 @@
 $("img[usemap]").mapster({
-  highlight: true,
   fillColor: "643dff",
   strokeColor: "643dff",
   strokeOpacity: 0.8,
