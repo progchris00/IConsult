@@ -323,6 +323,12 @@ section {
   align-items: center;
   margin-top: auto;
 }
+
+#form-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 /* Main end */
 
 /* Result area */

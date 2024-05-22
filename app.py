@@ -35,16 +35,18 @@ def diagnosis():
 def assessment():
     return render_template('assessment.html')
 
-@app.route("/result")
+@app.route("/result", methods=['POST'])
 def result():
+    data = request.get_json()
+    answers = data.get('answers', [])
     return render_template('result.html', disease="test disease", symptoms="this, is, a, test, symptoms,", hospital="test hospital", cost="test cost")
 
-def getData():
-    symptoms  = request.form.get("")
-    duration = request.form.get("")
-    isPersistent = request.form.get("")
-    triggers = request.form.get("")
-    triggersObserved = request.form.get("")
+# def getData():
+#     symptoms  = request.form.get("")
+#     duration = request.form.get("")
+#     isPersistent = request.form.get("")
+#     triggers = request.form.get("")
+#     triggersObserved = request.form.get("")
 
 if __name__ == "__main__":
     app.run(debug=True)
