@@ -26,7 +26,7 @@ const allQuestions = [
   },
   {
     id: 4,
-    question: "What are these triggers or patterns you observed?",
+    question: "Do you have a medical history that is similar to this?",
   },
 ];
 

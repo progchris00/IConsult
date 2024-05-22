@@ -82,6 +82,11 @@ section {
 ul > li {
   padding-left: 20px;
 }
+
+.side-icon {
+  width: 30px;
+}
+
 /* Nav */
 
 .icon {
