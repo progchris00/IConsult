@@ -18,7 +18,7 @@
 
 # output_text = body['results'][0]['outputText']
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 
 app = Flask(__name__)
 
@@ -38,6 +38,13 @@ def assessment():
 @app.route("/result")
 def result():
     return render_template('result.html', disease="test disease", symptoms="this, is, a, test, symptoms,", hospital="test hospital", cost="test cost")
+
+def getData():
+    symptoms  = request.form.get("")
+    duration = request.form.get("")
+    isPersistent = request.form.get("")
+    triggers = request.form.get("")
+    triggersObserved = request.form.get("")
 
 if __name__ == "__main__":
     app.run(debug=True)

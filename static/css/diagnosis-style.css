@@ -239,15 +239,15 @@ section {
   color: var(--secondary-color);
 }
 
-.assessment-container > p {
+.assessment-container > div > p {
   color: var(--secondary-color);
   font-weight: 600;
 }
 
-.question-area {
+.form-container {
   width: 90%;
   background-color: var(--secondary-color);
-  height: 250px;
+  height: 350px;
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -255,26 +255,15 @@ section {
   padding: 20px;
 }
 
-.question {
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.question-left-side {
+.assessment-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 40px;
+  gap: 30px;
+  height: 70%;
   width: 100%;
 }
 
-.question-left-side p {
-  color: white;
-  font-size: 1.2rem;
-}
-
-.question-left-side input {
+.assessment-form input {
   border: none;
   padding: 10px;
   border-radius: 16px;
@@ -282,41 +271,57 @@ section {
 }
 
 .button {
-  border: 2px solid white;
+  border: none;
   border-radius: 8px;
   padding: 10px 30px;
-  background-color: var(--secondary-color);
-  color: var(--font-color-white);
+  background-color: var(--app-background-color);
+  color: var(--secondary-color);
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
   width: 150px;
 }
 
-button:hover:not(.inactive, .appoinment-btn),
 #proceed-button:hover {
   background-color: #4703bb;
 }
 
-#question-number {
+.question {
+  font-size: 1.2rem;
+}
+
+#next-question:hover,
+#previous-question:hover:not(.inactive),
+#submit:hover {
+  background-color: #e0e0e0;
+}
+
+.question-and-number-container {
+  color: var(--font-color-white);
   text-align: start;
 }
 
-#question-count {
+#question-number {
   font-size: 0.8rem;
+}
+
+.hide {
+  display: none;
 }
 
 .inactive {
   background-color: #c9cacb;
   color: #717888;
   cursor: not-allowed;
+  border: none;
 }
 
 .navigation-buttons {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 /* Main end */
 

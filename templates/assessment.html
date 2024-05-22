@@ -2,25 +2,38 @@
 <main>
   <div class="assessment-area">
     <div class="assessment-container">
-      <h3>
-        On this stage, we want you to answer various questions for us to better
-        assess your condition.
-      </h3>
-      <p>Please answer the questions as clearly as possible.</p>
-      <div class="question-area">
-        <div class="question">
-          <div class="question-left-side">
-            <div id="question-number">
-              <p id="question-count"></p>
-              <p id="assessment-question"></p>
-            </div>
-            <input id="input-box" type="text" placeholder="Answer here" />
-          </div>
-        </div>
+      <div>
+        <h3>
+          On this stage, we want you to answer various questions for us to
+          better assess your condition.
+        </h3>
+        <p>Please answer the questions as clearly as possible.</p>
       </div>
-      <div class="navigation-buttons">
-        <button class="button inactive" id="previous-question">Previous</button>
-        <button class="button" id="next-question">Next</button>
+      <div class="form-container">
+        <form action="" class="assessment-form">
+          <div class="question-and-number-container">
+            <p id="question-number">Question #1</p>
+            <label class="question" for=""
+              >What specific symptoms are you experiencing recently?</label
+            >
+          </div>
+          <input id="input-box" type="text" placeholder="Answer here" />
+          <div class="navigation-buttons">
+            <button
+              type="button"
+              class="button inactive"
+              id="previous-question"
+            >
+              Previous
+            </button>
+            <button type="button" class="button" id="next-question">
+              Next
+            </button>
+            <button type="submit" class="button hide" id="submit">
+              Generate
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
