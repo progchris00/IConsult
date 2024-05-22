@@ -2,7 +2,58 @@
 <main>
   <div class="result-area">
     <div class="result-container">
-      <h3>{{ output }}</h3>
+      <h3>Based on the findings, here are the possible diagnosis:</h3>
+      <div class="result findings">
+        <img
+          src="{{ url_for('static', filename='images/findings.svg') }}"
+          alt=""
+          class="svg"
+        />
+        <div class="text">
+          <span class="large bold">Possible Findings:</span>
+          <span>{{disease}}</span>
+        </div>
+      </div>
+      <div class="result symptoms">
+        <img
+          src="{{ url_for('static', filename='images/symptoms.svg') }}"
+          alt=""
+          class="svg"
+        />
+        <div class="text">
+          <span class="large bold">Symptoms:</span>
+          <span>{{symptoms}}</span>
+        </div>
+      </div>
+      <div class="result recommended-hospital-doctor">
+        <img
+          src="{{ url_for('static', filename='images/hospital.svg') }}"
+          alt=""
+          class="svg"
+        />
+        <div class="text">
+          <span class="large bold">Recommended hospital and doctor</span>
+          <span>{{hospital}}</span>
+          <span>Dr. John Doe - Pulmonologist (lung specialist)</span>
+        </div>
+      </div>
+      <div class="result cost">
+        <img
+          src="{{ url_for('static', filename='images/price.svg') }}"
+          alt=""
+          class="svg"
+        />
+        <div class="text">
+          <span class="large bold">Possible range cost:</span>
+          <span>₱ {{cost}}</span>
+        </div>
+      </div>
+      <button class="appoinment-btn">Schedule an appoinment</button>
+      <div class="disclaimer">
+        Please remember: While the information provided here can be helpful for
+        understanding your condition, it's essential to consult with a doctor
+        for a professional evaluation.
+      </div>
     </div>
   </div>
 </main>

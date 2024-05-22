@@ -37,7 +37,7 @@ def assessment():
 
 @app.route("/result")
 def result():
-    return render_template('result.html', output=output_text)
+    return render_template('result.html', disease="test disease", symptoms="this, is, a, test, symptoms,", hospital="test hospital", cost="test cost")
 
 if __name__ == "__main__":
     app.run(debug=True)
