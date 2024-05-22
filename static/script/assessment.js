@@ -1,8 +1,9 @@
-const questionContainer = document.getElementById("assessment-question");
+const questionContainer = document.getElementById("question");
 const nextQuestionButton = document.getElementById("next-question");
 const previousQuestionButton = document.getElementById("previous-question");
 const inputBox = document.getElementById("input-box");
-const questionCount = document.getElementById("question-count");
+const questionCount = document.getElementById("question-number");
+const submitButton = document.getElementById("submit");
 
 const allQuestions = [
   {
@@ -47,7 +48,8 @@ const showPreviousQuestion = () => {
 
 const loadQuestion = (id) => {
   if (currentQuestionIndex === allQuestions.length - 1) {
-    nextQuestionButton.innerHTML = "Generate";
+    submitButton.classList.remove("hide");
+    nextQuestionButton.classList.add("hide");
   }
   if (currentQuestionIndex > 0) {
     previousQuestionButton.classList.remove("inactive");
