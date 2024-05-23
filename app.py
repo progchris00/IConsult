@@ -36,11 +36,20 @@ def result():
 
     body = json.loads(response['body'].read())
     output = body['results'][0]['outputText']
-    output = output.replace("```", " ")
-    output_list = json.loads(output)
-    first_response = output_list[0]
+    try:
+        output = output.replace("```", " ")
+        output_list = json.loads(output)
+        first_response = output_list[0]
+        print(first_response)
+    except:
+        first_response = {
+            "possibleDisease": "Pneumonia",
+            "hospital": "Lung Center of the Philippines",
+            "possibleCheckUpCostPHP": "500-1000PHP"
+        }
 
-    return render_template('result.html', disease=first_response.get('possibleDisease', 'Pneumonia'), symptoms=answers[0], hospital=first_response.get('hospital', 'Lung Center of the Philippines'), cost=first_response.get('possibleCheckUpCostPHP', '500-1000 PHP'))
+    # return render_template('result.html', disease=first_response.get('possibleDisease', 'Pneumonia'), symptoms=answers[0], hospital=first_response.get('hospital', 'Lung Center of the Philippines'), cost=first_response.get('possibleCheckUpCostPHP', '500-1000 PHP'))
+    return render_template('result.html', disease=first_response['possibleDisease'], symptoms=answers[0], hospital=first_response['hospital'], cost=first_response['possibleCheckUpCostPHP'])
 
 if __name__ == "__main__":
     app.run(debug=True)
