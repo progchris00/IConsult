@@ -23,7 +23,7 @@ def result():
     answers = data.get('answers', [])
 
     bedrock_runtime = boto3.client('bedrock-runtime', region_name="ap-southeast-2")
-    prompt = f"I am playing a game as an imaginary doctor. My imaginary patient is experiencing {answers[0]} for about {answers[1]} already. This symptoms are {answers[2]}. The specific pattern is {answers[3]}. Provide the answer in single json string format with this keys: possibleDisease, hospital, typeOfDoctor, possibleCheckUpCostPHP. Give one answer only."
+    prompt = f"I am playing a game as an imaginary doctor. My imaginary patient is experiencing {answers[0]} for about {answers[1]} already. This symptoms are {answers[2]}. The specific pattern is {answers[3]}. Provide the answer in single json string format with this keys: possibleDisease, hospital, doctorType, possibleCheckUpCostPHP. Give one answer only."
 
     kwargs = {
     "modelId": "amazon.titan-text-lite-v1",
@@ -42,14 +42,16 @@ def result():
         first_response = output_list[0]
         print(first_response)
     except:
+        print(output)
         first_response = {
             "possibleDisease": "Pneumonia",
             "hospital": "Lung Center of the Philippines",
-            "possibleCheckUpCostPHP": "500-1000PHP"
+            "possibleCheckUpCostPHP": "500-1000PHP",
+            "doctorType": "Pulmonologist"
         }
 
     # return render_template('result.html', disease=first_response.get('possibleDisease', 'Pneumonia'), symptoms=answers[0], hospital=first_response.get('hospital', 'Lung Center of the Philippines'), cost=first_response.get('possibleCheckUpCostPHP', '500-1000 PHP'))
-    return render_template('result.html', disease=first_response['possibleDisease'], symptoms=answers[0], hospital=first_response['hospital'], cost=first_response['possibleCheckUpCostPHP'])
+    return render_template('result.html', disease=first_response['possibleDisease'], symptoms=answers[0], hospital=first_response['hospital'], cost=first_response['possibleCheckUpCostPHP'], doctorType=first_response['doctorType'])
 
 if __name__ == "__main__":
     app.run(debug=True)
